@@ -10,6 +10,8 @@ accountEmail = "Angshu.yaho.google.in"
 accountPassword = "985598"
 accountCity = "Bishnupur"
 
+//prefer not to use var
+
 console.log(accountId);
 console.log([accountId, accountEmail, accountPassword, accountCity])
 console.log(accountState); //It throws undefined
