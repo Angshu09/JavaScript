@@ -1,9 +1,9 @@
 const name = "Angshu"
 const repoCount = 20
 
-// console.log(name + repoCount + "Value") //This is old version
+// console.log(name + ", my repo no is " + repoCount) //This is old version
 
-console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); //This is a modern way of printing the values 
+// console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); //This is a modern way of printing the values 
  
  const gameName = new String('The morning is upon us') // create string using object
 
@@ -14,10 +14,10 @@ console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); //Thi
 //  console.log(gameName.charAt(2)); // it returns the given index's character
 //  console.log(gameName.indexOf('m')); // it returns the index of the given character from the String
 
-// const newString = gameName.substring(0, 3) //it creates a substring of the main String from 0 to less than 4 (Given number)
+// const newString = gameName.substring(0, 5) //it creates a substring of the main String from given number to less than Given number
 // console.log(newString)
-// const anotherString = gameName.slice(-2, 3) //extracts the text from one string and returns a new string. Changes to the text in one string do not affect the other string 
-// console.log(anotherString) 
+const anotherString = gameName.slice(3, -1) //extracts the text from one string and returns a new string. Changes to the text in one string do not affect the other string 
+console.log(anotherString) 
 
 // const newStringOne = "     Angshu      ";
 // console.log(newStringOne)

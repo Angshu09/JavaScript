@@ -5,10 +5,9 @@
 // console.log(typeof actual)
 // console.log(actual) // This is string 
 
-/*let b = "33"
-let c = "67uhg"
-let d = true*/
-
+// let b = "33"
+// let c = "67uhg"
+// let d = true
 
 // console.log(typeof c);
 // let realval = Number(c)
@@ -25,5 +24,5 @@ let d = true*/
 // true => 1, false => 0
 // 1 => true, 0 => false  
 // " " => false
-// "Angshu" => true              
+// "Angshu" => true        
 
