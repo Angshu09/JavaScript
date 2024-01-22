@@ -6,7 +6,7 @@ const ammount = new Number(100);
 
 // console.log(ammount.toString()); // "100"
 // console.log(ammount.toString.length); // It gives me 3
-// console.log(ammount.toFixed(2)); //It gives me 100.00
+// console.log(ammount.toFixed(2)); //It gives me 100.00 //It also returns me String = "100.00"
 
 const otherNumber = 123.8790
 // console.log(otherNumber.toPrecision(3)); //It gives me 124
