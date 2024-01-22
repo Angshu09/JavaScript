@@ -14,7 +14,11 @@ const dc_heros = ["Batman", "SuperMan", "Flash", "WonderWoman"];
 
 
 // console.log(marvel_heros.concat(dc_heros)); //It returns a new array -> 
-/* [
+/* 
+
+The concat() method in JavaScript is used to merge two or more arrays or values into a new array. It does not modify the existing arrays but instead returns a new array that contains the elements of the original arrays.
+
+[
   'Ironman',
   'Thor',
   'CaptainAmerica',
@@ -23,7 +27,9 @@ const dc_heros = ["Batman", "SuperMan", "Flash", "WonderWoman"];
   'SuperMan',
   'Flash',
   'WonderWoman'
-] */
+]
+
+*/
 
 
 // const newArr = [...marvel_heros, ...dc_heros]; // it spread out the every element of the array

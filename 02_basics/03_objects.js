@@ -24,12 +24,13 @@ const person = {
 
 person.greeting = function(){
     console.log("Hello world");
+    return "executed";
 }
 
 console.log(person.greeting); //[Function (anonymous)]
 console.log(person.greeting());
 //   Hello world
-//   undefined
+//   executed
 
 person.greeting2 = function(){
     console.log(`Hello this is ${this.name}`);
