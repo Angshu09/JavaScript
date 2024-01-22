@@ -9,7 +9,7 @@ const ammount = new Number(100);
 // console.log(ammount.toFixed(2)); //It gives me 100.00 //It also returns me String = "100.00"
 
 const otherNumber = 123.8790
-// console.log(otherNumber.toPrecision(3)); //It gives me 124
+// console.log(otherNumber.toPrecision(3)); //It gives me 124 //It also returns a string value 
 
 const hundreds = 1000000
 // console.log(hundreds.toLocaleString()) //US standard
@@ -21,9 +21,9 @@ const hundreds = 1000000
 
 
 
-console.log(Math);
+console.log(Math);                     //Object [Math] {}
 console.log(Math.abs(-4));             // It just converts the negative number to positive
-console.log(Math.round(4.2));          // It gives me 4 but if I put 4.5 or greater then it will give me 5 (Actually this method is used to return a round up value of a number)
+console.log(Math.round(4.4));          // It gives me 4 but if I put 4.5 or greater then it will give me 5 (Actually this method is used to return a round up value of a number)
 console.log(Math.ceil(4.1));           // It always give me upper number
 console.log(Math.floor(4.9));          // It always give me lower or that number 
 console.log(Math.min(3, 1, 5, 6, 9));  // It gives me the smaller number in this case 1
