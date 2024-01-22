@@ -18,7 +18,7 @@ person.name = "Rittu";
 //Rittu , is a student of MAKAUT
 //{ name: 'Rittu', college: 'MAKAUT', greeting: [Function: greeting] }
 
-// console.log(this); //{}
+// console.log(this); //local machine output - {}
 // note - In the browser the global object is Window object
 
 const anime = function(){

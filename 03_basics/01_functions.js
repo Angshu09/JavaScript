@@ -8,9 +8,10 @@ function greeting(name = "mr-x"){
     return `${name} Hi! Good morning`;
 }
 
-// console.log(greeting("Angshu"));
+// console.log(greeting()); //mr-x Hi! Good morning
+// console.log(greeting("Angshu")); //Angshu Hi! Good morning
 
-function show(...number){
+function show(...number){ //rest parameter syntax - it stores the arguments in the number array
     return number;
 }
 
@@ -25,7 +26,7 @@ function showObj(anyObjcet){
     console.log(`hey ${anyObjcet.name} this is your 2nd year ${anyObjcet.year}`);
 }
 
-// showObj(person) //hey Angshu this is your 2nd year 2024
+showObj(person); //hey Angshu this is your 2nd year 2024
 
 showObj({
     name: "mr-x",
