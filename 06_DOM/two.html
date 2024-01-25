@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body  style="background-color: #212121; color: #fff; ">
+    <div class="parent">
+        <div class="day">MonDay</div>
+        <div class="day">TuesDay</div>
+        <div class="day">WednesDay</div>
+        <div class="day">ThursDay</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent); //By this we select that parent div
+    // console.log(parent.children); //it prints the child divs of that parent div in a htmlCollection format
+    // console.log(parent.children[1]); // it gives me the value of the index 1 div - Tuesday
+    // console.log(parent.children[0].innerHTML); //MonDay
+
+    // for(let i=0; i<parent.children.length; i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    //MonDay
+    //TuesDay
+//  WednesDay
+//  ThursDay
+
+
+    // parent.children[1].style.color = "red";
+    // parent.children[1].style.backgroundColor = "yellow";
+    // console.log(parent.firstElementChild); //<div class="day">MonDay</div>
+    // console.log(parent.lastElementChild); //<div class="day">ThursDay</div>
+
+
+    const child = document.querySelector('.day');
+    // console.log(child); //<div class="day">MonDay</div>
+    // console.log(child.parentElement); //<div class="parent">...</div>
+    // console.log(child.nextElementSibling); // <div class="day">TuesDay</div>
+
+    console.log("Nodes: ", parent.childNodes);
+</script>
+</html>
