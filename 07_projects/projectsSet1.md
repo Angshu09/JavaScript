@@ -32,6 +32,7 @@ button.forEach(function (e){
 ```
 
 
+
 ## Project 2 solution
 
 ```Javascript
@@ -64,4 +65,87 @@ form.addEventListener('submit', function(e){
   }
 })
 
+```
+
+## Project 3 solution
+
+```Javascript
+
+const clock = document.getElementById('clock');
+
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+
+}, 1000);
+
+```
+
+
+## Project 4 solution
+
+```Javascript
+
+const randomNumber = parseInt(Math.random() * 100 + 1) ;
+const input =  document.querySelector('#guessField');
+const submit =  document.querySelector('#subt');
+const guessSlot = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+
+const p = document.createElement('p');
+
+let prevGuess = [];
+let noOfGuess = 1;
+
+let playGame = true;
+
+if(playGame){
+  submit.addEventListener('click', function(e){
+    e.preventDefault();
+    const guess = parseInt(input.value);
+    validateGuess(guess);
+  })
+}
+
+function validateGuess(guess){
+  if(isNaN(guess)){
+    alert('Please enter a valid number');
+  }
+  else if(guess > 100){
+    alert('Plese enter a number that is less than 100');
+  }
+  else if(guess < 1){
+    alert('Please enter a number that is greater than equal to 1');
+  }
+  else{
+    prevGuess.push(guess);
+    if(noOfGuess > 10){
+      displayGuess(guess);
+      displayMessage(`Game over. Random no was ${randomNumber}`);
+      endGame();
+    }
+  }
+}
+
+function checkGuess(guess){
+
+}
+
+function displayGuess(guess){
+
+}
+
+function displayMessage(message){
+
+}
+
+function newGame(){
+
+}
+
+function endGame(){
+
+}
 ```
