@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js events</title>
+</head>
+<body>
+    <ul id="images">
+        <li><img width="200" src="https://images.pexels.com/photos/19795102/pexels-photo-19795102/free-photo-of-fources.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="stairs" id="stairs"></li>
+        <li><img width="200" src="https://images.pexels.com/photos/19898940/pexels-photo-19898940/free-photo-of-close-up-of-an-owl-perching-in-a-hollow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="owl" id="owl"></li> <!--onClick(alert('owl')) this is not a good approach-->
+        <li><img width="200" src="https://images.pexels.com/photos/14577237/pexels-photo-14577237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="bench" id="bench"></li>
+        <li><img width="200" src="https://images.pexels.com/photos/18176651/pexels-photo-18176651/free-photo-of-fisherman-on-fishing-boat-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="boat" id="boat"></li>
+        <li><img width="200" src="https://images.pexels.com/photos/6610749/pexels-photo-6610749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="fruit" id="fruit"></li>
+        <li><img width="200" src="https://images.pexels.com/photos/18142601/pexels-photo-18142601/free-photo-of-glass-of-pomegranate-juice-with-lemon-slice.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="juice" id="juice"></li>
+        <li><a href="https://google.com" id="google">google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function (){
+    //     alert('owl');
+    // } 
+
+    //attachEvent()
+    //jQuery - on
+
+    //Study things - 
+    //time, defaultPrevent, timestamp
+    //target, toElement, srcElement, currentTarget
+    //clinetX, clientY, screenX, screenY
+    //altKey, ctrlKey, shiftKey, keyCode
+  
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //    console.log("again clicked owl"); //here it creates bubbling
+    //     e.stopPropagation();
+    // }, false)
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked on ul");
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault(); //By this we stop the working of the present event
+    //     e.stopPropagation();
+    //     console.log("clicked on google");
+    // }, false)
+
+    // remove the images by clicking 
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+        // removeIt.parentNode.removeChild(removeIt);
+    }, false);
+</script>
+</html>
