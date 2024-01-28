@@ -87,12 +87,13 @@ setInterval(function () {
 
 ```Javascript
 
-const randomNumber = parseInt(Math.random() * 100 + 1) ;
+let randomNumber = parseInt(Math.random() * 100 + 1) ;
 const input =  document.querySelector('#guessField');
 const submit =  document.querySelector('#subt');
 const guessSlot = document.querySelector('.guesses');
 const remaining = document.querySelector('.lastResult');
 const lowOrHi = document.querySelector('.lowOrHi');
+const startOver = document.querySelector('.resultParas');
 
 const p = document.createElement('p');
 
@@ -126,26 +127,60 @@ function validateGuess(guess){
       displayMessage(`Game over. Random no was ${randomNumber}`);
       endGame();
     }
+    else{
+      displayGuess(guess);
+      checkGuess(guess);
+    }
   }
 }
 
 function checkGuess(guess){
-
+  if(guess === randomNumber){
+    displayMessage(` You guessed it right`);
+    endGame();
+  }
+  else if(guess < randomNumber){
+    displayMessage(` Your guess is low`);
+  }
+  else{
+    displayMessage(` Your guess is high`);
+  }
 }
 
 function displayGuess(guess){
-
+  input.value = '';
+  guessSlot.innerHTML += `${guess}, `;
+  noOfGuess++;
+  remaining.innerHTML = `${11 - noOfGuess} `;
 }
 
 function displayMessage(message){
-
-}
-
-function newGame(){
-
+  lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
 
 function endGame(){
-
+  input.value = '';
+  input.setAttribute('disabled', '');
+  p.classList.add('button');
+  p.innerHTML = '<h2 id="newGame">Start new Game</h2>';
+  startOver.appendChild(p);
+  playGame = false;
+  newGame();
 }
+
+
+function newGame(){
+  const startgame = document.querySelector('#newGame');
+  startgame.addEventListener('click', function(e){
+    randomNumber = parseInt(Math.random() * 100 + 1) ;
+    prevGuess = [];
+    noOfGuess = 1;
+    guessSlot.innerHTML = '';
+    remaining.innerHTML = `${11 - noOfGuess} `;
+    input.removeAttribute('disabled');
+    startOver.removeChild(p);
+    playGame = true;
+  });
+}
+
 ```
