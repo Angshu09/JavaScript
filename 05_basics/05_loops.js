@@ -16,7 +16,7 @@
 // ))
 // console.log(newNums); //[ 5, 6, 7, 8, 9, 10 ]
 // Returns the elements of an array that meet the condition specified in a callback function.
-//If a start a scope and I want to return something then I need to write return explicitly
+//If I start a scope and I want to return something then I need to write return explicitly
 
 // const newNums = [];
 // myNums.forEach((num) => {
