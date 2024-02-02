@@ -6,11 +6,23 @@
     <title>Async</title>
 </head>
 <body style="background-color: #212121;">
-    <h1 style="color: white;" id="heading">This is H1</h1>
+    <h1 style="color: white;" id="heading">Chai aur JavaScript</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
+    <p style="color: white;" class="para"></p>
 </body>
 <script>
+const p = document.querySelector('p');
+const sayDate = function (str){
+    p.innerHTML = `${str}, ${Date.now()}, `
+}
+let set;
+document.querySelector('#start').addEventListener('click', function(){
+   set = setInterval(sayDate, 1000, "hi")
+})
 
+document.querySelector('#stop').addEventListener('click', function(){
+    clearInterval(set);
+})
 </script>
 </html>
