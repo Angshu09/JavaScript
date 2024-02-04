@@ -82,6 +82,29 @@ async function consumePromiseFive(){
 consumePromiseFive();
 
 
-async function getAllInfo(){
-    
-}
+// async function getAllInfo(){
+//     try {
+//         const url = await fetch('https://api.github.com/users/Angshu09');
+//         const data = await url.json();
+//         console.log(data);
+//     } 
+//     catch (error) {
+//         console.log(error);
+//     }
+   
+// }
+
+// getAllInfo();
+
+
+
+fetch('https://api.github.com/users/Angshu09')
+.then((response) => {
+    return response.json();
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => {
+    console.log(error);
+})
