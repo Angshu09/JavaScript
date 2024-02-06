@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color boxes</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hi</div>
+        <div class="box">Hi</div>
+        <div class="box">Hi</div>
+        <div class="box">Hi</div>
+        <div class="box">Hi</div>
+    </div>
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        boxes.forEach(function(f){
+            f.style.backgroundColor = getRandomColor();
+            f.style.color = getRandomColor();
+        })
+
+        function getRandomColor(){
+            // a + random * (b - a) ---> Formula of generating random color by rgb
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+    </script>
+</body>
+</html>
