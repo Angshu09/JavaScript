@@ -9,7 +9,7 @@ console.log(mul.Angshu) //4
 console.log(mul.prototype) //{}
 
 
-// this is a fuinction bu internally is behvaes like an object
+// this is a fuinction but internally it behvaes like an object
 function createUser(username, score){
     this.username = username;
     this.score = score;
