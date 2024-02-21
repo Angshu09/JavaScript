@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scoping</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function parent(){
+        let name = "xyz";
+
+        function child1(){
+            let child1Name = "abc";
+            console.log("child1", name);
+
+            function grandChild1(){
+                console.log(child1Name); // accessable
+                console.log(name); // accessable
+            }
+
+            grandChild1();
+        }
+
+        function child2(){
+            console.log("child2" , name);
+            // console.log(child1Name); //Not accessable 
+        }
+
+        // console.log(child1Name); //Not accessable
+
+        child1();
+        child2();
+    }
+
+    parent();
+</script>
+</html>
