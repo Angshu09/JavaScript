@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imediate Invoked Function Expression</title>
+</head>
+<body>
+    <script>
+        async function delay(){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve();
+                }, 2000);
+            })
+        }
+
+        (async function main(){
+            let a = await delay();
+            console.log("a loaded");
+            let b = await delay();
+            console.log("b loaded");
+        })()
+    </script>
+</body>
+</html>
