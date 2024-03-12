@@ -44,7 +44,7 @@ const user = {
 
 const teacher = {
     makevideo: true,
-    __proto__: user //By this teacher inherits the properties of teacher
+    __proto__: user //By this teacher inherits the properties of user
 }
 
 console.log(user.teacherName);

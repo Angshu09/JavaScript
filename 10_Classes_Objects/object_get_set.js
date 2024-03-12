@@ -12,4 +12,5 @@ const user = {
 }
 
 const tea = Object.create(user);
-console.log(tea.email);
+tea.email = 'xyz@gmail.com'; //Setting the email
+console.log(tea.email); //getting the email

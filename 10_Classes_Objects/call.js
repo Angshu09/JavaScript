@@ -1,13 +1,13 @@
-function setUsername(username){
-    this.username = username;
-    console.log("called");
+function setUserName(name){
+    this.name = name;
 }
 
-function createUser(username, gmail, password){
-    setUsername.call(this, username);
-    this.gmail = gmail;
-    this.password = password;
+function createUser(name, place, college){
+    setUserName.call(this, name);
+    this.place = place;
+    this.college = college;
+
 }
 
-const user = new createUser("Angshu", "angshu191@gmail.com", 345);
-console.log(user);
+const user1 = new createUser('xyz', 'abc', 'kmn');
+console.log(user1);
